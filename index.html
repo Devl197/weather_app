@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container-fluid bg-dark py-5 mb-3">
+        <div class="row row-cols-1">
+            <div class="col d-flex justify-content-center">
+                <h2 class="text-light">Weather in your city</h2>
+            </div> <!-- col mt-3 d-flex justify-content-center -->
+        </div> <!-- row row-cols-1 -->
+        <div class="row">
+            <div class="col-12 py-4 d-flex justify-content-center">
+                <div class="search-container">
+                    <div class="input-group py-4">
+                        <input id="name" type="text" class="form-control" placeholder="Weather in your city">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary" type="button" id="searchCity" >Search</button>
+                        </div> <!--input-group-append -->
+                    </div>  <!--input-group w-50 -->
+                    <ul class="list-group d-none" id="searchResults">
+                    </ul><!-- searchResults -->
+                </div><!-- search-container -->
+            </div> <!--col py-4 d-flex justify-content-center -->
+        </div> <!--row row-cols-1 bg-info -->
+    </div><!-- container-fluid bg-dark py-5 mb-3 -->
+    <div class="container">
+        <div class="row rounded-lg shadow border">
+            <div class="col-12 col-md-6 mt-2" id="weatherData">
+                <h4 id="cityName"><i class="fas fa-map-marker-alt"></i></h4>
+                <p id="time"></p>
+                <img id="weatherImg" alt="weather image">
+                <h3 id="temp" class="d-inline-block"></h3>
+                <p id="description"></p>
+                <p id="otherInfo"></p>
+            </div><!-- col mt-2 -->
+            <div class="col-12 col-md-6 mt-2">
+                <ul class="list-unstyled" id="eightDayForecast">
+                    
+                </ul>
+            </div><!-- col-12 col-md-6 mt-2 -->
+        </div><!--row row-cols-2 -->
+        <div class="row rounded-lg shadow border mt-3">
+            <div class="col-12 col-md-6 mt-2">
+                <canvas id="chartTemp"></canvas>
+            </div><!-- col mt2 -->
+            <div class="col-12 col-md-6 mt-2">
+                <canvas id="chartPreci"></canvas>
+            </div><!-- col mt2 -->
+        </div><!-- "row row-cols-2 rounded-lg shadow border mt-3"-->
+    </div> <!-- container -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script type="module" src=".\js\modules\UI.js"></script>
+  </body>
+</html>

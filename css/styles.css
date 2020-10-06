@@ -1,0 +1,49 @@
+ul.list-group li.list-group-item p:first-child {
+    font-weight: bold;
+    color: goldenrod;
+}
+
+ .input-group{
+     width: 100% !important;
+ }
+
+  @media (min-width: 576px) {
+    .search-container{
+        width: 75% !important;
+    }
+ } 
+
+ @media (min-width: 992px) {
+    .search-container{
+        width: 45% !important;
+    }
+ }
+
+ #list-results p:first-child:hover{
+    cursor: pointer;
+    text-decoration: underline;
+ }
+
+ #eightDayForecast li p{
+     margin-bottom: 0;
+ }
+
+ .search-container{
+     position: relative;
+     display: flex;
+     width: 100%;
+ }
+
+ .search-container p {
+    margin-bottom: 0;
+ }
+.list-group{
+    position: absolute;
+    top: 62px;
+    width: 100%;
+    z-index: 9999;
+}
+
+#searchResults li {
+    cursor: pointer;
+}
